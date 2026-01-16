@@ -71,7 +71,6 @@ main {
     background: #222;
     color: #fff;
     min-height: 200px;
-    /* o quanto serve */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,4 +82,49 @@ main {
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+
+}
+
+/* SecondaryContent Styles */
+
+.blue-icons-section {
+    background: #0282f9;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.blue-icon-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    text-align: left;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.blue-icon-item img,
+.blue-icon-item svg {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.blue-icon-item:hover {
+    transform: translateY(-3px);
+}
+
+.blue-icon-item span {
+    max-width: 140px;
+    line-height: 1.3;
 }

@@ -4,6 +4,7 @@ const MainContent = () => {
             <div className="main-content-container">
                 <h2>--Contents goes Here--</h2>
             </div>
+
         </main>
     )
 }
