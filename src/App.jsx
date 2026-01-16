@@ -1,7 +1,8 @@
 // importazione contenuti
 import MainHeader from "./components/MainHeader"
 import MainContent from "./components/MainContent"
-import BlueIconsSection from "./components/SecondaryContent"
+import BlueIconsSection from "./components/BlueIconSection"
+
 
 function App() {
 
@@ -15,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default App 
