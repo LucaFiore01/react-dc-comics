@@ -2,6 +2,7 @@
 import MainHeader from "./components/MainHeader"
 import MainContent from "./components/MainContent"
 import BlueIconsSection from "./components/BlueIconSection"
+import MainFooter from "./components/MainFooter"
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <MainHeader />
       <MainContent />
       <BlueIconsSection />
-
+      <MainFooter />
     </>
   )
 }
