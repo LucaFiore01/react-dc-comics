@@ -300,6 +300,15 @@ footer::before {
     transform: scale(1.15);
 }
 
+.follow {
+    cursor: pointer;
+
+}
+
+.follow:hover {
+    color: #ffffff;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* SMARTPHONE (320px - 480px) */

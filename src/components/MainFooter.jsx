@@ -61,7 +61,7 @@ const MainFooter = () => {
             <div className="footer-bottom">
                 <button className="signup-btn">SIGN-UP NOW!</button>
                 <div className="footer-social">
-                    <h4>FOLLOW US</h4>
+                    <h4 className="follow">FOLLOW US</h4>
                     <div className="social-icons">
                         <a href="#"><img src="/src/assets/img/footer-facebook.png" alt="Facebook" /></a>
                         <a href="#"><img src="/src/assets/img/footer-twitter.png" alt="Twitter" /></a>
