@@ -21,7 +21,7 @@ const NavBar = () => {
                 {links.map((link) => {
                     return (
                         <li key={link.id}>
-                            <a href={link.url}>
+                            <a href={link.url} className={link.current ? 'active' : ''}>
                                 {link.text}
                             </a>
 
