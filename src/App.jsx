@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <MainHeader />
+      <div className="jumbotron" />
       <MainContent />
       <BlueIconsSection />
       <MainFooter />
