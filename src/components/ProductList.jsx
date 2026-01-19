@@ -153,7 +153,26 @@ const ProductList = () => {
             writers: ["Joëlle Jones"],
         },
     ];
+    return (
+        <section id="products">
+            <div className="container">
+                <div className="section-tag">Current Series</div>
 
+                <div className="card-container">
+                    {comics.map((fumetto) => (
+                        <article className="comics-card" key={fumetto.id}>
+                            <img src={fumetto.thumb} alt={fumetto.title} />
+                            <h3 className="series-name">{fumetto.series}</h3>
+                        </article>
+                    ))}
+                </div>
+
+                <div className="actions">
+                    <button className="btn load-more" type="button">Load More</button>
+                </div>
+            </div>
+        </section>
+    )
 
 }
 

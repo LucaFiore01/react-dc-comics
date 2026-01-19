@@ -300,7 +300,92 @@ footer::before {
     transform: scale(1.15);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+
+
+/* stile relativo alle card dei fumetti  */
+
+#products {
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 40px 0 20px;
+}
+
+#products .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-tag {
+    display: inline-block;
+    background-color: #0282f9;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px;
+}
+
+.comics-card {
+    background-color: #121212;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.comics-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.comics-card .series-name {
+    color: #cfcfcf;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    padding: 10px 8px 14px;
+}
+
+.comics-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px;
+}
+
+.btn.load-more {
+    background-color: #0282f9;
+    border: none;
+    color: #fff;
+    padding: 10px 26px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    cursor: pointer;
+}
+
+.btn.load-more:hover {
+    filter: brightness(1.1);
+}
 
 /* SMARTPHONE (320px - 480px) */
 @media (max-width: 480px) {
