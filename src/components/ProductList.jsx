@@ -156,6 +156,7 @@ const ProductList = () => {
             writers: ["Joëlle Jones"],
         },
     ];
+
     return (
         <section id="products">
             <div className="container">
