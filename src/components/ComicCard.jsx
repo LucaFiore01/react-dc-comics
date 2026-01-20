@@ -1,17 +1,10 @@
-const ComicCard = (props) => {
+const ComicCard = ({ id, thumb, title, series }) => {
     return (
-
-        <div className="card-container">
-            {comics.map((fumetto) => (
-                <article className="comics-card" key={props.id}>
-                    <img src={props.thumb} alt={props.title} />
-                    <h3 className="series-name">{props.series}</h3>
-                </article>
-            ))}
-        </div>
+        <article className="comics-card">
+            <img src={thumb} alt={title} />
+            <h3 className="series-name">{series}</h3>
+        </article>
     )
-
 }
-
 
 export default ComicCard

@@ -164,10 +164,7 @@ const ProductList = () => {
 
                 <div className="card-container">
                     {comics.map((fumetto) => (
-                        <article className="comics-card" key={fumetto.id}>
-                            <img src={fumetto.thumb} alt={fumetto.title} />
-                            <h3 className="series-name">{fumetto.series}</h3>
-                        </article>
+                        <ComicCard key={fumetto.id} id={fumetto.id} thumb={fumetto.thumb} title={fumetto.title} series={fumetto.series} />
                     ))}
                 </div>
 
