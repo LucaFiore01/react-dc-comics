@@ -4,9 +4,10 @@ import { BudgetContext } from '../context/BudgetContext';
 
 const ProductList = () => {
 
-    // Recuperiamo budgetMode dal context
-    const { budgetMode } = useContext(BudgetContext);
+    // Recuperiamo i fumetti filtrati direttamente dal context
+    const { filteredComics } = useContext(BudgetContext);
 
+    /* I dati dei comics sono ora centralizzati nel BudgetContext
     const comics = [
         {
             id: 1,
@@ -161,12 +162,10 @@ const ProductList = () => {
             artists: ["Fernando Blanco", "Joëlle Jones"],
             writers: ["Joëlle Jones"],
         },
-    ];
+    ]; */
 
-    // Filtriamo i fumetti in base alla modalità budget
-    const filteredComics = budgetMode
-        ? comics.filter(comic => parseFloat(comic.price.replace('$', '')) <= 30)
-        : comics;
+    // La logica di filtro è ora gestita centralmente nel BudgetContext
+    // Non serve più duplicare il filtro qui
 
     return (
         <section id="products">
