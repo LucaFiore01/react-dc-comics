@@ -1,4 +1,10 @@
+import { useContext } from 'react';
+import { BudgetContext } from '../context/BudgetContext';
+
 const NavBar = () => {
+
+    // Utilizziamo il context per accedere allo stato budgetMode
+    const { budgetMode, setBudgetMode } = useContext(BudgetContext);
 
     // dati relativi alla navbar per i link di navigazione
     const links = [
@@ -30,6 +36,9 @@ const NavBar = () => {
                 })}
 
             </ul>
+            <button onClick={() => setBudgetMode(!budgetMode)}>
+                {budgetMode ? 'Disattiva Modalità Budget' : 'Attiva Modalità Budget'}
+            </button>
         </nav>
     )
 
