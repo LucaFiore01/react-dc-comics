@@ -1,6 +1,12 @@
+import { useContext } from 'react';
 import ComicCard from "./ComicCard";
+import { BudgetContext } from '../context/BudgetContext';
 
 const ProductList = () => {
+
+    // Recuperiamo budgetMode dal context
+    const { budgetMode } = useContext(BudgetContext);
+
     const comics = [
         {
             id: 1,
@@ -157,13 +163,18 @@ const ProductList = () => {
         },
     ];
 
+    // Filtriamo i fumetti in base alla modalità budget
+    const filteredComics = budgetMode
+        ? comics.filter(comic => parseFloat(comic.price.replace('$', '')) <= 30)
+        : comics;
+
     return (
         <section id="products">
             <div className="container">
                 <div className="section-tag">Current Series</div>
 
                 <div className="card-container">
-                    {comics.map((fumetto) => (
+                    {filteredComics.map((fumetto) => (
                         <ComicCard key={fumetto.id} id={fumetto.id} thumb={fumetto.thumb} title={fumetto.title} series={fumetto.series} />
                     ))}
                 </div>
