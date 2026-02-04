@@ -5,14 +5,10 @@ export const BudgetContext = createContext();
 
 // Creiamo il Provider component
 export const BudgetProvider = ({ children }) => {
-    const [isBudgetMode, setIsBudgetMode] = useState(false);
-
-    const toggleBudgetMode = () => {
-        setIsBudgetMode(!isBudgetMode);
-    };
+    const [budgetMode, setBudgetMode] = useState(false);
 
     return (
-        <BudgetContext.Provider value={{ isBudgetMode, toggleBudgetMode }}>
+        <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
             {children}
         </BudgetContext.Provider>
     );
